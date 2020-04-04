@@ -1,0 +1,24 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+
+  .bg-dark {
+    background-color: rgba(0, 0, 0, .7) !important;
+
+    .nasa-logo-container {
+      width: 4rem;
+
+      .nasa-logo {
+        width: 100%;
+      }
+    }
+
+    .spacex-logo-container {
+      width: 8rem;
+
+      .spacex-logo {
+        width: 100%;
+      }
+    }
+  }
+}
