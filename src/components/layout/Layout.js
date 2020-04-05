@@ -17,32 +17,34 @@ function Layout() {
   return (
     <Router>
       <Container fluid>
-        <Container>
-          <Navbar bg="dark" variant="dark" expand="md" sticky="top">
-            <NavLink to="/" exact>
-              <Navbar.Brand className="nasa-logo-container">
-                <Image src={NasaLogo} alt="NASA Logo" className="d-inline-block align-top nasa-logo" />
-              </Navbar.Brand>
-              <Navbar.Brand className="spacex-logo-container">
-                <Image src={SpaceXLogo} alt="NASA Logo" className="d-inline-block align-bottom spacex-logo" />
-              </Navbar.Brand>
-            </NavLink>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="navbar-nav ml-auto">
-                <NavLink to="/" exact className="nav-link ml-auto">
-                  Home
-                </NavLink>
-                <NavLink to="/experience" className="nav-link ml-auto">
-                  Experience Space
-                </NavLink>
-                <NavLink to="/about" className="nav-link ml-auto">
-                  About
-                </NavLink>
-                <Button variant="link" className="nav-link ml-auto">Contact Us</Button>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+        <Container className="sticky-top navbar-container" fluid>
+          <Container>
+            <Navbar bg="dark" variant="dark" expand="md">
+              <NavLink to="/" exact>
+                <Navbar.Brand className="nasa-logo-container">
+                  <Image src={NasaLogo} alt="NASA Logo" className="d-inline-block align-top nasa-logo" />
+                </Navbar.Brand>
+                <Navbar.Brand className="spacex-logo-container">
+                  <Image src={SpaceXLogo} alt="NASA Logo" className="d-inline-block align-bottom spacex-logo" />
+                </Navbar.Brand>
+              </NavLink>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="navbar-nav ml-auto">
+                  <NavLink to="/" exact className="nav-link ml-auto">
+                    Home
+                  </NavLink>
+                  <NavLink to="/experience" className="nav-link ml-auto">
+                    Experience Space
+                  </NavLink>
+                  <NavLink to="/about" className="nav-link ml-auto">
+                    About
+                  </NavLink>
+                  <Button variant="link" className="nav-link ml-auto">Contact Us</Button>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </Container>
         </Container>
       
         <Switch>
