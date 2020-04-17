@@ -9,11 +9,15 @@ import {
 import Home from "../../pages/home/Home";
 import About from "../../pages/about/About";
 import Experience from "../../pages/experience/Experience";
+import Footer from "../footer/Footer";
+import MyModal from "../modal/Modal";
 import NasaLogo from "../../images/nasa-vector-logo.png";
 import SpaceXLogo from "../../images/spacex-vector-logo.png";
 import "./layout.scss";
 
 function Layout() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <Router>
       <Container fluid>
@@ -40,12 +44,17 @@ function Layout() {
                   <NavLink to="/about" className="nav-link ml-auto">
                     About
                   </NavLink>
-                  <Button variant="link" className="nav-link ml-auto">Contact Us</Button>
+                  <Button variant="link" className="nav-link ml-auto" onClick={() => setModalShow(true)}>Contact Us</Button>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
           </Container>
         </Container>
+
+        <MyModal 
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
       
         <Switch>
           <Route path="/" exact component={Home} />
@@ -53,6 +62,8 @@ function Layout() {
           <Route path="/experience" component={Experience} />
         </Switch>
       </Container>
+
+      <Footer />
     </Router>
   );
 }

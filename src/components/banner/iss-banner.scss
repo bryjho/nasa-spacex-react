@@ -1,0 +1,24 @@
+.iss-banner-container {
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../../images/photos/image003.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h2 {
+    padding-top: 5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .embed-container {
+    padding-bottom: 5rem;
+  }
+
+  a {
+    color: rgb(144, 207, 255);
+  }
+}
