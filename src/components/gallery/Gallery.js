@@ -1,16 +1,18 @@
 import React from "react";
-import { Container, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import './gallery.scss';
 import photos from '../../images/photos/photos';
 
 function Gallery() {
   return (
-    <Container fluid className="gallery-container d-flex flex-row flex-wrap justify-content-center">
-      { photos.map(({id, src, description}) => 
-        <div key={id}>
-          <Image src={src} alt={description} className="img-fluid" />
-        </div>) 
-      }
+    <Container fluid className="gallery-container"> 
+      <Row>
+        { photos.map(({id, src, description}) =>
+          <Col md={3} xs={6} key={id} className="gallery-image">
+            <Image src={src} alt={description} />
+          </Col>)
+        }
+      </Row>
     </Container>
   );
 }

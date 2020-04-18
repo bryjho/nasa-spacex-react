@@ -1,0 +1,1 @@
+export const NASA_APOD_URL = "https://api.nasa.gov/planetary/apod?api_key=n4s6U5u8Tc5MzpfYauL7w9vuiVo2Z8IzIliGYFok";

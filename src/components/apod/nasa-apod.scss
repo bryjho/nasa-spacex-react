@@ -1,0 +1,26 @@
+.apod-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .apod-info {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  hr {
+    height: .5rem;
+    background-color: #00467B;
+  }
+
+  .btn {
+    background-color: #00467B;
+    border-color: #00467B;
+    width: 15rem;
+  }
+}

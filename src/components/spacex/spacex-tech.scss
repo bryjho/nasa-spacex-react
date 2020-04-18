@@ -1,0 +1,33 @@
+.spacex-container {
+  background-color: #ffffff;
+  
+  .spacex-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h2 {
+      font-weight: 700;
+    }
+
+    hr {
+      height: .5rem;
+      background-color: #00467B;
+    }
+
+    .input-group-button {
+      width: auto;
+      background-color: #00467B;
+    }
+
+    .embed-container {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      width: 15rem;
+      background-color: #00467B;
+      border-color: #00467B;
+    }
+  }
+}
