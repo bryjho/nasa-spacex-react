@@ -26,11 +26,11 @@ function Apod(props) {
 
   return (
     <>
-      <Container fluid className="apod-container" style={{ bbackgroundImage: `url(${detail.hdurl})` }}>
+      <Container fluid className="apod-container" style={{ background: `-webkit-linear-gradient(bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${detail.hdurl})` }}>
         <Container className="apod-info">
           <h2 className="text-light">{detail.title}</h2>
           <hr></hr>
-          <p className="text-light">{detail.explanation}</p>
+          <p className="lead text-light">{detail.explanation}</p>
           <Button onClick={handleShow}>VIEW PHOTO</Button>
         </Container>
       </Container>

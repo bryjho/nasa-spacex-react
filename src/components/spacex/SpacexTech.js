@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, InputGroup, FormControl, Button, ResponsiveEmbed } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col, InputGroup, FormControl, Button, ResponsiveEmbed, Accordion } from 'react-bootstrap';
 import './spacex-tech.scss';
 import Gallery from '../gallery/Gallery';
+import SpacexRocket from './SpacexRocket';
+import SpacexDragon from './SpacexDragon';
+import SpacexRoadster from './SpacexRoadster';
 
 export function SpacexTech() {
   return (
@@ -9,7 +12,7 @@ export function SpacexTech() {
       <Container fluid className="spacex-container">
         <Container className="spacex-content">
           <Row>
-            <Col md={6}>
+            <Col md={6} className="subscribe-container">
               <h2 className="text-dark">SPACEX ROCKET TECHNOLOGY</h2>
               <hr></hr>
               <InputGroup className="mb-3">
@@ -30,7 +33,12 @@ export function SpacexTech() {
                   </ResponsiveEmbed>
                 </div>
                 <p className="lead text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-                <Button>VIEW MORE</Button>
+                <Accordion>
+                  <Accordion.Toggle as={Button} eventKey="0">VIEW MORE</Accordion.Toggle>
+                  <Accordion.Collapse eventKey="0">
+                    <SpacexRocket />
+                  </Accordion.Collapse>
+                </Accordion>
                 <hr></hr>
               </div>
 
@@ -42,7 +50,12 @@ export function SpacexTech() {
                   </ResponsiveEmbed>
                 </div>
                 <p className="lead text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-                <Button>VIEW MORE</Button>
+                <Accordion>
+                  <Accordion.Toggle as={Button} eventKey="0">VIEW MORE</Accordion.Toggle>
+                  <Accordion.Collapse eventKey="0">
+                    <SpacexDragon />
+                  </Accordion.Collapse>
+                </Accordion>
                 <hr></hr>
               </div>
 
@@ -54,7 +67,12 @@ export function SpacexTech() {
                   </ResponsiveEmbed>
                 </div>
                 <p className="lead text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-                <Button>VIEW MORE</Button>
+                <Accordion>
+                  <Accordion.Toggle as={Button} eventKey="0">VIEW MORE</Accordion.Toggle>
+                  <Accordion.Collapse eventKey="0">
+                    <SpacexRoadster />
+                  </Accordion.Collapse>
+                </Accordion>
                 <hr></hr>
               </div>
             </Col>
